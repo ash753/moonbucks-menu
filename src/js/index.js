@@ -71,7 +71,9 @@ function App() {
   const updateMenuName = (e) => {
     const $menuName = e.target.closest("li").querySelector(".menu-name");
     const updatedMenuName = prompt("메뉴명을 수정하세요", $menuName.innerText);
-    $menuName.innerText = updatedMenuName;
+    if (updatedMenuName) {
+      $menuName.innerText = updatedMenuName;
+    }
   };
 
   const removeMenuName = (e) => {
